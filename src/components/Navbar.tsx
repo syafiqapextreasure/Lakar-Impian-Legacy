@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
           className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B64B] rounded-lg"
           aria-label="Lakar Impian Legacy Laman Utama"
         >
-          <BrandLogo variant="light" size="sm" showSubtitle={false} />
+          <BrandLogo variant="full-graphic" size="sm" showSubtitle={false} />
         </a>
 
         {/* Desktop Navigation: Exactly 4 links + 1 CTA button */}

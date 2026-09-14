@@ -1,7 +1,6 @@
 import React from 'react';
-import officialLogoImg from '../assets/images/lakar_official_logo.jpg';
-import emblemTransparentImg from '../assets/images/lakar_emblem_transparent.png';
-import logoTransparentImg from '../assets/images/lakar_logo_transparent.png';
+import officialLogoImg from '../assets/images/lakar_official_logo_cropped.png';
+import officialEmblemImg from '../assets/images/lakar_official_emblem_cropped.png';
 
 interface BrandLogoProps {
   className?: string;
@@ -21,21 +20,22 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   const goldColor = '#C99A2E';
   const subtextColor = isDarkBg ? '#E0B64B' : '#C99A2E';
 
-  // If user wants the full official graphic directly (with Jawi & tagline)
+  // Render the actual official logo artwork supplied by the client.
+  // It is intentionally shown on a white card so the white fist/details remain visible.
   if (variant === 'full-graphic') {
     const graphicHeights = {
-      sm: 'h-12',
-      md: 'h-20',
-      lg: 'h-28',
+      sm: 'h-12 sm:h-14',
+      md: 'h-20 sm:h-24',
+      lg: 'h-28 sm:h-32',
       xl: 'h-36 sm:h-44',
     };
     return (
-      <div className={`inline-block rounded-xl overflow-hidden bg-white p-2 shadow-md border border-[#C99A2E]/30 ${className}`}>
+      <div className={`inline-flex items-center rounded-2xl overflow-hidden bg-white px-2.5 py-1.5 shadow-md border border-[#C99A2E]/40 ${className}`}>
         <img
           src={officialLogoImg}
-          alt="Logo Rasmi Lakar Impian Legacy - Lakar Design"
+          alt="Logo rasmi Lakar Impian Legacy - Lakar Design, Impian Anda Misi Kami"
           referrerPolicy="no-referrer"
-          className={`${graphicHeights[size]} w-auto object-contain mx-auto`}
+          className={`${graphicHeights[size]} w-auto max-w-[78vw] object-contain mx-auto`}
         />
       </div>
     );
@@ -61,10 +61,10 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       {/* Official Emblem: Fist gripping golden pen emerging from teal crescent with gold stars */}
       <div className={`relative ${emblemSizes[size]} shrink-0 rounded-2xl p-1 bg-white border-2 border-[#C99A2E] shadow-md flex items-center justify-center transition-transform duration-300 hover:scale-105`}>
         <img
-          src={emblemTransparentImg}
-          alt="Logo Rasmi Lakar Impian Legacy - Pen Emas & Sabit"
+          src={officialEmblemImg}
+          alt="Emblem rasmi Lakar Impian Legacy - Pen Emas & Sabit"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain rounded-xl"
         />
       </div>
 

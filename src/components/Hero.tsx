@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
 
             {/* Brand Logo Highlight on Hero */}
             <div className="p-3 sm:p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 w-fit">
-              <BrandLogo variant="light" size="md" showSubtitle={true} />
+              <BrandLogo variant="full-graphic" size="lg" showSubtitle={true} />
             </div>
 
             {/* Main Headlines - strictly matching requirements & accessibility font sizes */}
