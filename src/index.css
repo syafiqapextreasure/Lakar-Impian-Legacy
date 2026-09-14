@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-deep-teal: #004C4C;
+    --color-dark-emerald: #075E54;
+    --color-forest-green: #0A5C50;
+    --color-warm-gold: #C99A2E;
+    --color-champagne-gold: #E0B64B;
+    --color-warm-cream: #FAF7EF;
+    --color-off-white: #FFFDF8;
+    --color-charcoal: #202020;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 17px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    html {
+      font-size: 18.5px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Glassmorphism custom helpers */
+.glass-teal {
+  background: rgba(0, 76, 76, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201, 154, 46, 0.25);
+}
+
+.glass-card {
+  background: rgba(255, 253, 248, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 76, 76, 0.12);
+}
+
+.glass-card-dark {
+  background: rgba(7, 94, 84, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(224, 182, 75, 0.28);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E0B64B 0%, #C99A2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
