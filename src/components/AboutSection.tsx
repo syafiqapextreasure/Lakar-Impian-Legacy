@@ -27,10 +27,6 @@ export const AboutSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Full Official Brand Graphic Showcase */}
-              <div className="p-4 sm:p-5 bg-white rounded-2xl border-2 border-[#C99A2E]/30 shadow-sm max-w-md">
-                <BrandLogo variant="full-graphic" size="lg" />
-              </div>
 
               <h2 className="text-[34px] sm:text-[42px] lg:text-[48px] font-black text-[#004C4C] tracking-tight leading-tight">
                 Kenali Lakar Impian Legacy

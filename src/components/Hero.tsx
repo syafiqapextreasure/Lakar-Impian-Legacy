@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, MessageCircle, MapPin, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
 import { BUSINESS_INFO, IMAGES } from '../data';
-import { BrandLogo } from './BrandLogo';
+
 
 export const Hero: React.FC = () => {
   const chips = [
@@ -33,10 +33,6 @@ export const Hero: React.FC = () => {
               </span>
             </div>
 
-            {/* Brand Logo Highlight on Hero */}
-            <div className="p-3 sm:p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 w-fit">
-              <BrandLogo variant="full-graphic" size="lg" showSubtitle={true} />
-            </div>
 
             {/* Main Headlines - strictly matching requirements & accessibility font sizes */}
             <div className="space-y-3">

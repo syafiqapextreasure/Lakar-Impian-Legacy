@@ -40,16 +40,20 @@ export const Navbar: React.FC = () => {
         <a
           href="#utama"
           id="nav-logo-link"
-          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B64B] rounded-lg"
+          className="flex items-center gap-2 sm:gap-3 min-w-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B64B] rounded-lg"
           aria-label="Lakar Impian Legacy Laman Utama"
         >
           <BrandLogo variant="full-graphic" size="sm" showSubtitle={false} />
+          <span className="flex min-w-0 flex-col">
+            <span className="text-[11px] sm:text-[15px] font-black uppercase leading-tight text-white">Lakar Impian Legacy</span>
+            <span className="mt-1 text-[9px] sm:text-[10px] font-bold tracking-[0.15em] text-[#E0B64B]">LAKAR DESIGN</span>
+          </span>
         </a>
 
         {/* Desktop Navigation: Exactly 4 links + 1 CTA button */}
         <nav
           id="desktop-nav"
-          className="hidden md:flex items-center gap-8 lg:gap-10"
+          className="hidden lg:flex items-center gap-6 xl:gap-10"
           aria-label="Navigasi Utama"
         >
           {navLinks.map((link) => (
@@ -76,7 +80,7 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Mobile Action Buttons: WhatsApp shortcut + Hamburger button */}
-        <div className="flex md:hidden items-center gap-2 sm:gap-3">
+        <div className="flex lg:hidden shrink-0 items-center gap-1 sm:gap-3">
           {/* Quick WhatsApp Shortcut for mobile users */}
           <a
             href={BUSINESS_INFO.whatsappUrl}
@@ -118,7 +122,7 @@ export const Navbar: React.FC = () => {
       {isOpen && (
         <div
           id="mobile-nav"
-          className="md:hidden bg-[#004C4C]/95 backdrop-blur-xl border-b border-[#C99A2E]/40 px-6 pt-5 pb-8 space-y-4 animate-in fade-in slide-in-from-top-4 duration-200"
+          className="lg:hidden bg-[#004C4C]/95 backdrop-blur-xl border-b border-[#C99A2E]/40 px-6 pt-5 pb-8 space-y-4 animate-in fade-in slide-in-from-top-4 duration-200"
         >
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => (
